@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <title>Nishanka S P | Full Stack Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <!-- Bootstrap CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
-  
+  <!-- Font Awesome for icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -33,7 +33,7 @@
     scroll-behavior: smooth;
   }
 
-
+  /* Navbar */
   .navbar {
     backdrop-filter: blur(18px);
     background-color: rgba(255, 255, 255, 0.95) !important;
@@ -57,6 +57,7 @@
     color: var(--primary) !important;
   }
 
+  /* Spacing */
   section {
     padding: 5rem 0;
   }
@@ -67,7 +68,7 @@
     }
   }
 
-
+  /* Hero */
   #home {
     min-height: 100vh;
     display: flex;
@@ -89,7 +90,7 @@
 
   .hero-subtitle {
     font-size: 1.05rem;
-    color: var(--muted);
+  color: #374151;
     max-width: 550px;
   }
 
@@ -136,7 +137,7 @@
     letter-spacing: 0.06em;
   }
 
-
+  /* Section headings */
   .section-title {
     font-size: 1.6rem;
     font-weight: 700;
@@ -150,7 +151,7 @@
     max-width: 480px;
   }
 
-
+  /* Cards */
   .soft-card {
     background: var(--card-bg);
     border-radius: 1.1rem;
@@ -165,7 +166,7 @@
     transition: all 0.18s ease-out;
   }
 
-
+  /* Skills */
   .skill-badge {
     display: inline-flex;
     align-items: center;
@@ -188,6 +189,7 @@
     margin-bottom: 0.4rem;
   }
 
+  /* Projects */
   .project-card {
     background: #ffffff;
     border-radius: 1.1rem;
@@ -232,6 +234,7 @@
     background: #f3f4ff;
   }
 
+  /* Timeline (Experience) */
   .timeline {
     border-left: 1px solid var(--border-soft);
     padding-left: 1.5rem;
@@ -266,6 +269,7 @@
     color: #6b7280;
   }
 
+  /* Contact */
   .form-control,
   .form-control:focus {
     background-color: #ffffff;
@@ -289,7 +293,7 @@
     font-size: 1.2rem;
   }
 
-
+  /* Footer */
   footer {
     border-top: 1px solid var(--border-soft);
     padding: 1.4rem 0;
@@ -318,7 +322,7 @@
     color: var(--primary);
   }
 
-
+  /* Utility */
   .text-muted-soft {
     color: #6b7280;
   }
@@ -352,7 +356,7 @@
     filter: brightness(80%);
   }
 
-
+  /* Offset for fixed navbar when using anchor links */
   :target::before {
     content: "";
     display: block;
@@ -360,14 +364,43 @@
     margin-top: -70px;
     visibility: hidden;
   }
+
+  /* Hero: light, clean, image only on top */
+#home {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding-top: 110px;        /* space for navbar */
+  padding-bottom: 60px;
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,0.0) 55%, #ffffff 100%),
+    url("assets/port.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0 0 40px 40px;
+}
+
+/* remove dark overlay – not needed now */
+#home::before {
+  content: none;
+}
+
+#home > * {
+  position: relative;
+  z-index: 1;
+}
+
+
 </style>
 
 </head>
 <body>
-
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#home">NG</a>
+      <a class="navbar-brand" href="#home"></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -400,8 +433,9 @@
             <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <!-- Resume link -->
             <a
-              href="Nishanka Resume-.pdf"
+              href="assets/Nishanka Resume-.pdf"
               class="btn btn-sm btn-primary-soft"
               target="_blank"
               download
@@ -415,7 +449,7 @@
     </div>
   </nav>
 
-
+  <!-- Hero -->
   <section id="home">
     <div class="container">
       <div class="row gy-4 align-items-center">
@@ -438,6 +472,7 @@
             clean, maintainable code and attention to real-world use cases.
           </p>
           <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#projects" >
             <button id="viewProjectsBtn" class="btn btn-primary-soft btn-lg px-4">
               <i class="fa-solid fa-grid-2 me-2"></i> View Projects
             </button>
@@ -457,7 +492,7 @@
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/nishankagowda15"
               target="_blank"
               rel="noopener"
               class="social-link"
@@ -468,12 +503,12 @@
           </div>
         </div>
 
-        <div class="col-lg-5">
+        <!-- <div class="col-lg-5">
           <div class="hero-card p-4 p-md-5 mt-3 mt-lg-0">
             <div class="d-flex flex-column align-items-center text-center">
               <div class="hero-avatar mb-3">
-            
-                <span>NSP</span>
+                <!-- Initials -->
+                <!-- <span>NSP</span>
               </div>
               <p class="mb-2 fw-semibold">Full Stack Developer · Vilcart Solutions Pvt Ltd</p>
               <p class="small text-muted-soft mb-3 px-3">
@@ -506,13 +541,13 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div> -->
       </div>
     </div>
   </section>
 
-
+  <!-- About -->
   <section id="about">
     <div class="container">
       <div class="row gy-4 align-items-start">
@@ -589,7 +624,7 @@
     </div>
   </section>
 
-
+  <!-- Skills -->
   <section id="skills">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-between align-items-end mb-3">
@@ -635,7 +670,7 @@
     </div>
   </section>
 
-
+  <!-- Projects -->
   <section id="projects">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-between align-items-end mb-3">
@@ -645,66 +680,110 @@
             Key work from my role at Vilcart Solutions and personal projects.
           </p>
         </div>
-        <a href="https://github.com" target="_blank" rel="noopener"
+        <!-- <a href="https://github.com" target="_blank" rel="noopener"
            class="small text-muted-soft text-decoration-none">
           View more on GitHub <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
-        </a>
+        </a> -->
       </div>
 
       <div class="row gy-4">
+        <!-- Project 1: Vilcart ERP -->
         <div class="col-md-6 col-lg-4">
           <article class="project-card p-3 d-flex flex-column">
-            <img src="erp.png" alt="Vilcart ERP"
+            <img src="assets/erp.png" alt="Vilcart ERP"
                  style="width:100%; height:180px; object-fit:cover; border-radius:10px; margin-bottom:10px;">
             <div class="mb-2 d-flex justify-content-between align-items-center">
-              <span class="tag">Full-stack · Production</span>
-              <span class="project-tech">
+              <!-- <span class="tag">Full-stack · Production</span> -->
+              <!-- <span class="project-tech">
                 <i class="fa-brands fa-angular me-1"></i> Angular · Node.js · REST APIs
-              </span>
+              </span> -->
             </div>
             <h3 class="project-title mb-1">VilcartERP</h3>
             <p class="project-description mb-3">
-              Web-based ERP system used by Kirana shop owners to place and track
-              orders, monitor stock levels, and automatically update inventory
-              based on sales, transfers and receipts.
+              ERP system for managing inventory, sales, billing, and vendor operations across rural supply chains.
             </p>
-            <ul class="small text-muted-soft mb-3">
+            <!-- <ul class="small text-muted-soft mb-3">
               <li>Built and integrated inventory automation modules to reduce manual errors.</li>
               <li>Implemented responsive Angular components for order and stock workflows.</li>
               <li>Worked on backend logic and APIs to support real-time updates.</li>
-            </ul>
+            </ul> -->
           </article>
         </div>
 
-
+        <!-- Project 2: VilReports -->
         <div class="col-md-6 col-lg-4">
           <article class="project-card p-3 d-flex flex-column">
-        <img src="vilreport.png?v=2"
-     alt="VilReports"
-     style="width:100%; height:180px; object-fit:cover; border-radius:10px; margin-bottom:10px;">
-
+            <img src="assets/vilreport.png" alt="VilReports"
+                 style="width:100%; height:180px; object-fit:cover; border-radius:10px; margin-bottom:10px;">
             <div class="mb-2 d-flex justify-content-between align-items-center">
-              <span class="tag">Frontend & Analytics</span>
+              <!-- <span class="tag">Frontend & Analytics</span>
               <span class="project-tech">
                 <i class="fa-brands fa-angular me-1"></i> Angular · Analytics · APIs
-              </span>
+              </span> -->
             </div>
             <h3 class="project-title mb-1">VilReports</h3>
             <p class="project-description mb-3">
-              Reporting and analytics platform supporting modules like Orders,
-              CRM, Customer Management, SKU Tracking, HR Genius, Attendance and
-              Order Analytics.
+              Reporting dashboard with data-driven insights and module-wise downloadable reports.
             </p>
-            <ul class="small text-muted-soft mb-3">
+            <!-- <ul class="small text-muted-soft mb-3">
               <li>Developed responsive Angular front-end components for multiple modules.</li>
               <li>Helped surface analytics and KPIs to support operational decisions.</li>
               <li>Worked closely with business teams to align UI with real workflows.</li>
+            </ul> -->
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <article class="project-card p-3 d-flex flex-column">
+            <img src="assets/1.png" alt="VilReports"
+                 style="width:100%; height:180px; object-fit:cover; border-radius:10px; margin-bottom:10px;">
+            <div class="mb-2 d-flex justify-content-between align-items-center">
+              <!-- <span class="tag">Frontend & Analytics</span>
+              <span class="project-tech">
+                <i class="fa-brands fa-angular me-1"></i> Angular · Analytics · APIs
+              </span> -->
+            </div>
+            <h3 class="project-title mb-1">Vilcart CRM</h3>
+            <p class="project-description mb-3">
+            CRM for managing rural customer interactions, tracking leads, and improving client engagement.
+            </p>
+            <!-- <ul class="small text-muted-soft mb-3">
+              <li>Developed responsive Angular front-end components for multiple modules.</li>
+              <li>Helped surface analytics and KPIs to support operational decisions.</li>
+              <li>Worked closely with business teams to align UI with real workflows.</li>
+            </ul> -->
+          </article>
+        </div>
+
+
+        <!-- Project 3: Portfolio site -->
+        <!-- <div class="col-md-6 col-lg-4">
+          <article class="project-card p-3 d-flex flex-column">
+            <img src="assets/portfolio.png" alt="Portfolio website"
+                 style="width:100%; height:180px; object-fit:cover; border-radius:10px; margin-bottom:10px;">
+            <div class="mb-2 d-flex justify-content-between align-items-center">
+              <span class="tag">Personal</span>
+              <span class="project-tech">
+                HTML · CSS · Bootstrap
+              </span>
+            </div>
+            <h3 class="project-title mb-1">Developer Portfolio</h3>
+            <p class="project-description mb-3">
+              This portfolio site, built to showcase my resume, projects, and
+              experience in a clean, recruiter-friendly way.
+            </p>
+            <ul class="small text-muted-soft mb-3">
+              <li>Single-page layout with smooth scrolling and responsive design.</li>
+              <li>Project image previews with click-to-enlarge modal.</li>
+              <li>Ready to be shared on LinkedIn and job applications.</li>
             </ul>
           </article>
         </div>
+      </div>
+    </div> -->
   </section>
 
- 
+  <!-- Experience -->
   <section id="experience">
     <div class="container">
       <h2 class="section-title mb-3">Experience</h2>
@@ -713,7 +792,7 @@
       </p>
 
       <div class="timeline">
-
+        <!-- Experience Item 1 -->
         <div class="timeline-item">
           <div class="timeline-role">Full Stack Developer · Vilcart Solutions Pvt Ltd</div>
           <div class="timeline-meta mb-1">Jul 2024 – Present · Bengaluru</div>
@@ -728,7 +807,7 @@
           </ul>
         </div>
 
-
+        <!-- Experience Item 2 -->
         <div class="timeline-item">
           <div class="timeline-role">Assistant Professor · MIT College</div>
           <div class="timeline-meta mb-1">Dec 2023 – May 2024 · Mysore</div>
@@ -742,7 +821,7 @@
           </ul>
         </div>
 
-
+        <!-- Experience Item 3 -->
         <div class="timeline-item">
           <div class="timeline-role">Trainee Executive · Corporate Networks</div>
           <div class="timeline-meta mb-1">Jun 2023 – Nov 2023</div>
@@ -758,7 +837,7 @@
     </div>
   </section>
 
-
+  <!-- Education -->
   <section id="education">
     <div class="container">
       <h2 class="section-title mb-3">Education</h2>
@@ -792,7 +871,7 @@
     </div>
   </section>
 
-
+  <!-- Contact -->
   <section id="contact">
     <div class="container">
       <div class="row gy-4">
@@ -823,16 +902,16 @@
                 linkedin.com/in/nishanka-prabhakar
               </a>
             </div>
-    
+            <!-- GitHub -->
             <div class="d-flex align-items-center">
               <i class="fa-brands fa-github me-3"></i>
               <a
-                href="https://github.com"
+                href="https://github.com/nishankagowda15"
                 target="_blank"
                 rel="noopener"
                 class="text-decoration-none text-muted-soft"
               >
-                github.com/your-username
+                https://github.com/nishankagowda15
               </a>
             </div>
           </div>
@@ -845,19 +924,23 @@
     </div>
   </section>
 
-
+  <!-- Footer -->
   <footer>
     <div class="container d-flex flex-wrap justify-content-between align-items-center">
-  
+      <!-- <span>© <span id="year"></span> Nishanka Gowda. All rights reserved.</span>
+      <span class="mt-2 mt-md-0">
+        Built with HTML · Bootstrap · a bit of love.
+      </span> -->
     </div>
   </footer>
 
- 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-
+    // Set year dynamically
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Smooth scroll to projects on button click
     const btn = document.getElementById("viewProjectsBtn");
     const projectsSection = document.getElementById("projects");
     if (btn && projectsSection) {
@@ -866,7 +949,7 @@
       });
     }
 
-
+    // Image Click Preview
     document.querySelectorAll(".project-card img").forEach(img => {
       img.style.cursor = "pointer";
       img.addEventListener("click", () => {
@@ -877,17 +960,18 @@
     });
   </script>
 
-
+  <!-- Image Preview Modal -->
   <div class="modal fade" id="imageModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content" style="background: #020617; border: none; position:relative;">
 
+        <!-- Close Button -->
         <button type="button" class="btn-close btn-close-white"
                 data-bs-dismiss="modal" aria-label="Close"
                 style="position:absolute; top:10px; right:10px; z-index:10;">
         </button>
 
-       
+        <!-- Image -->
         <img id="modalImage" src="" style="width:100%; border-radius:10px;">
       </div>
     </div>
