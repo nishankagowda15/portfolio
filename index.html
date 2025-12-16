@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <title>Nishanka S P | Full Stack Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Bootstrap CSS -->
+
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
-  <!-- Font Awesome for icons -->
+  
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -33,7 +33,7 @@
     scroll-behavior: smooth;
   }
 
-  /* Navbar */
+
   .navbar {
     backdrop-filter: blur(18px);
     background-color: rgba(255, 255, 255, 0.95) !important;
@@ -57,7 +57,6 @@
     color: var(--primary) !important;
   }
 
-  /* Spacing */
   section {
     padding: 5rem 0;
   }
@@ -68,7 +67,7 @@
     }
   }
 
-  /* Hero */
+
   #home {
     min-height: 100vh;
     display: flex;
@@ -137,7 +136,7 @@
     letter-spacing: 0.06em;
   }
 
-  /* Section headings */
+
   .section-title {
     font-size: 1.6rem;
     font-weight: 700;
@@ -151,7 +150,7 @@
     max-width: 480px;
   }
 
-  /* Cards */
+
   .soft-card {
     background: var(--card-bg);
     border-radius: 1.1rem;
@@ -166,7 +165,7 @@
     transition: all 0.18s ease-out;
   }
 
-  /* Skills */
+
   .skill-badge {
     display: inline-flex;
     align-items: center;
@@ -189,7 +188,6 @@
     margin-bottom: 0.4rem;
   }
 
-  /* Projects */
   .project-card {
     background: #ffffff;
     border-radius: 1.1rem;
@@ -234,7 +232,6 @@
     background: #f3f4ff;
   }
 
-  /* Timeline (Experience) */
   .timeline {
     border-left: 1px solid var(--border-soft);
     padding-left: 1.5rem;
@@ -269,7 +266,6 @@
     color: #6b7280;
   }
 
-  /* Contact */
   .form-control,
   .form-control:focus {
     background-color: #ffffff;
@@ -293,7 +289,7 @@
     font-size: 1.2rem;
   }
 
-  /* Footer */
+
   footer {
     border-top: 1px solid var(--border-soft);
     padding: 1.4rem 0;
@@ -322,7 +318,7 @@
     color: var(--primary);
   }
 
-  /* Utility */
+
   .text-muted-soft {
     color: #6b7280;
   }
@@ -356,7 +352,7 @@
     filter: brightness(80%);
   }
 
-  /* Offset for fixed navbar when using anchor links */
+
   :target::before {
     content: "";
     display: block;
@@ -368,7 +364,7 @@
 
 </head>
 <body>
-  <!-- Navbar -->
+
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#home">NG</a>
@@ -404,7 +400,6 @@
             <a class="nav-link" href="#contact">Contact</a>
           </li>
           <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-            <!-- Resume link -->
             <a
               href="Nishanka Resume-.pdf"
               class="btn btn-sm btn-primary-soft"
@@ -420,7 +415,7 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+
   <section id="home">
     <div class="container">
       <div class="row gy-4 align-items-center">
@@ -477,7 +472,7 @@
           <div class="hero-card p-4 p-md-5 mt-3 mt-lg-0">
             <div class="d-flex flex-column align-items-center text-center">
               <div class="hero-avatar mb-3">
-                <!-- Initials -->
+            
                 <span>NSP</span>
               </div>
               <p class="mb-2 fw-semibold">Full Stack Developer · Vilcart Solutions Pvt Ltd</p>
@@ -517,7 +512,7 @@
     </div>
   </section>
 
-  <!-- About -->
+
   <section id="about">
     <div class="container">
       <div class="row gy-4 align-items-start">
@@ -594,7 +589,7 @@
     </div>
   </section>
 
-  <!-- Skills -->
+
   <section id="skills">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-between align-items-end mb-3">
@@ -640,7 +635,7 @@
     </div>
   </section>
 
-  <!-- Projects -->
+
   <section id="projects">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-between align-items-end mb-3">
@@ -657,7 +652,6 @@
       </div>
 
       <div class="row gy-4">
-        <!-- Project 1: Vilcart ERP -->
         <div class="col-md-6 col-lg-4">
           <article class="project-card p-3 d-flex flex-column">
             <img src="erp.png" alt="Vilcart ERP"
@@ -682,7 +676,7 @@
           </article>
         </div>
 
-        <!-- Project 2: VilReports -->
+
         <div class="col-md-6 col-lg-4">
           <article class="project-card p-3 d-flex flex-column">
         <img src="vilreport.png?v=2"
@@ -708,35 +702,9 @@
             </ul>
           </article>
         </div>
-
-        <!-- 
-        <div class="col-md-6 col-lg-4">
-          <article class="project-card p-3 d-flex flex-column">
-            <img src="assets/portfolio.png" alt="Portfolio website"
-                 style="width:100%; height:180px; object-fit:cover; border-radius:10px; margin-bottom:10px;">
-            <div class="mb-2 d-flex justify-content-between align-items-center">
-              <span class="tag">Personal</span>
-              <span class="project-tech">
-                HTML · CSS · Bootstrap
-              </span>
-            </div>
-            <h3 class="project-title mb-1">Developer Portfolio</h3>
-            <p class="project-description mb-3">
-              This portfolio site, built to showcase my resume, projects, and
-              experience in a clean, recruiter-friendly way.
-            </p>
-            <ul class="small text-muted-soft mb-3">
-              <li>Single-page layout with smooth scrolling and responsive design.</li>
-              <li>Project image previews with click-to-enlarge modal.</li>
-              <li>Ready to be shared on LinkedIn and job applications.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </div> -->
   </section>
 
-  <!-- Experience -->
+ 
   <section id="experience">
     <div class="container">
       <h2 class="section-title mb-3">Experience</h2>
@@ -745,7 +713,7 @@
       </p>
 
       <div class="timeline">
-        <!-- Experience Item 1 -->
+
         <div class="timeline-item">
           <div class="timeline-role">Full Stack Developer · Vilcart Solutions Pvt Ltd</div>
           <div class="timeline-meta mb-1">Jul 2024 – Present · Bengaluru</div>
@@ -760,7 +728,7 @@
           </ul>
         </div>
 
-        <!-- Experience Item 2 -->
+
         <div class="timeline-item">
           <div class="timeline-role">Assistant Professor · MIT College</div>
           <div class="timeline-meta mb-1">Dec 2023 – May 2024 · Mysore</div>
@@ -774,7 +742,7 @@
           </ul>
         </div>
 
-        <!-- Experience Item 3 -->
+
         <div class="timeline-item">
           <div class="timeline-role">Trainee Executive · Corporate Networks</div>
           <div class="timeline-meta mb-1">Jun 2023 – Nov 2023</div>
@@ -790,7 +758,7 @@
     </div>
   </section>
 
-  <!-- Education -->
+
   <section id="education">
     <div class="container">
       <h2 class="section-title mb-3">Education</h2>
@@ -824,7 +792,7 @@
     </div>
   </section>
 
-  <!-- Contact -->
+
   <section id="contact">
     <div class="container">
       <div class="row gy-4">
@@ -855,7 +823,7 @@
                 linkedin.com/in/nishanka-prabhakar
               </a>
             </div>
-            <!-- GitHub -->
+    
             <div class="d-flex align-items-center">
               <i class="fa-brands fa-github me-3"></i>
               <a
@@ -877,23 +845,19 @@
     </div>
   </section>
 
-  <!-- Footer -->
+
   <footer>
     <div class="container d-flex flex-wrap justify-content-between align-items-center">
-      <span>© <span id="year"></span> Nishanka Gowda. All rights reserved.</span>
-      <span class="mt-2 mt-md-0">
-        Built with HTML · Bootstrap · a bit of love.
-      </span>
+  
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
+ 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Set year dynamically
+
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Smooth scroll to projects on button click
     const btn = document.getElementById("viewProjectsBtn");
     const projectsSection = document.getElementById("projects");
     if (btn && projectsSection) {
@@ -902,7 +866,7 @@
       });
     }
 
-    // Image Click Preview
+
     document.querySelectorAll(".project-card img").forEach(img => {
       img.style.cursor = "pointer";
       img.addEventListener("click", () => {
@@ -913,18 +877,17 @@
     });
   </script>
 
-  <!-- Image Preview Modal -->
+
   <div class="modal fade" id="imageModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content" style="background: #020617; border: none; position:relative;">
 
-        <!-- Close Button -->
         <button type="button" class="btn-close btn-close-white"
                 data-bs-dismiss="modal" aria-label="Close"
                 style="position:absolute; top:10px; right:10px; z-index:10;">
         </button>
 
-        <!-- Image -->
+       
         <img id="modalImage" src="" style="width:100%; border-radius:10px;">
       </div>
     </div>
